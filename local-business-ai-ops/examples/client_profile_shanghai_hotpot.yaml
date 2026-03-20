@@ -1,0 +1,16 @@
+client_name: 沪上牛市火锅
+industry: 餐饮
+city: 上海
+audience:
+  - 22-35岁白领
+  - 周末聚会人群
+positioning: 人均80-120，主打新鲜牛肉+夜宵场景
+persona: 店长第一人称（真实、直给、接地气）
+content_goals:
+  weekly_posts: 5
+  leads_goal: 30
+  conversion_goal: 8
+kpi_baseline:
+  ctr: 3.2%
+  completion_rate: 18%
+  dm_leads: 12

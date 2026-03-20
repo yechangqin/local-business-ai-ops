@@ -23,6 +23,9 @@ local-business-ai-ops/
 │  ├─ ARCHITECTURE.md
 │  ├─ DELIVERY_SOP.md
 │  └─ OPERATIONS.md
+├─ examples/
+│  ├─ client_profile_shanghai_hotpot.yaml
+│  └─ weekly_report_sample.md
 ├─ scripts/
 │  └─ weekly_run.ps1
 ├─ templates/
