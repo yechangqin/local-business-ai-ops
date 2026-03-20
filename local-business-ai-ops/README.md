@@ -42,8 +42,18 @@
 
 ---
 
+## 快速开始
+
+```powershell
+cd scripts
+./weekly_run.ps1 -Industry 餐饮 -City 上海 -Audience "25-35岁上班族"
+```
+
+运行后会在 `output/时间戳/` 里生成本周执行包。
+
 ## 下一步
 
 1. 先选一个细分行业（餐饮/健身/美容/教育）
-2. 先做一个样板客户
-3. 生成可展示案例后再扩张
+2. 用 `templates/` 提示词批量产出内容
+3. 用 `docs/DELIVERY_SOP.md` 做标准化交付
+4. 生成可展示案例后再扩张
