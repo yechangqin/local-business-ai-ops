@@ -1,59 +1,65 @@
 # local-business-ai-ops
 
-面向本地商家的 AI 代运营自动化项目（MVP）。
+A production-oriented AI operations toolkit for local business content teams.
 
-## 目标
+## Why this project
+Most "AI代运营" projects stop at random prompts. This repo focuses on **repeatable delivery**:
+- structured weekly workflow
+- reusable templates
+- client-facing output package
+- measurable KPI loop
 
-用最少人工，完成一条可交付的商业闭环：
+## Features
+- Prompt templates for topic/script generation
+- Weekly automation entry script (`scripts/weekly_run.ps1`)
+- SOP + Architecture + Operations documentation
+- Weekly report template for client communication
 
-1. 自动生成选题池
-2. 自动生成短视频脚本与标题
-3. 自动输出发布排期
-4. 自动生成私信/评论回复模板
-5. 自动形成周报（可给客户）
+## Project Structure
 
----
+```text
+local-business-ai-ops/
+├─ docs/
+│  ├─ ARCHITECTURE.md
+│  ├─ DELIVERY_SOP.md
+│  └─ OPERATIONS.md
+├─ scripts/
+│  └─ weekly_run.ps1
+├─ templates/
+│  ├─ topic_prompt.md
+│  ├─ script_prompt.md
+│  ├─ client_offer.md
+│  └─ weekly_report_template.md
+├─ output/                 # generated weekly package (gitignored)
+├─ .gitignore
+└─ README.md
+```
 
-## 目录结构
-
-- `docs/`：项目文档
-- `templates/`：提示词模板、SOP、话术模板
-- `scripts/`：自动化脚本（后续接入 OpenClaw/CLI）
-
----
-
-## 7天 MVP 路线
-
-- Day 1：确定垂类 + 客户画像 + 交付清单
-- Day 2：完成选题/脚本模板
-- Day 3：完成发布排期与封面标题模板
-- Day 4：完成私信与评论回复模板
-- Day 5：完成周报模板
-- Day 6：拿一个真实案例跑通
-- Day 7：对外报价并开始接单
-
----
-
-## 首单报价建议（人民币）
-
-- 基础版：¥999/月（每周 3 条脚本 + 周报）
-- 标准版：¥1999/月（每周 5 条脚本 + 私域跟进模板）
-- 进阶版：¥3999/月（加数据复盘与增长策略）
-
----
-
-## 快速开始
+## Quick Start
 
 ```powershell
 cd scripts
-./weekly_run.ps1 -Industry 餐饮 -City 上海 -Audience "25-35岁上班族"
+./weekly_run.ps1 -Industry 餐饮 -City 上海 -Audience "25-35岁上班族" -Persona "老板第一人称"
 ```
 
-运行后会在 `output/时间戳/` 里生成本周执行包。
+Output will be generated under `output/<timestamp>/`.
 
-## 下一步
+## Delivery Standard (recommended)
+- Monday: topic pool + approval
+- Tue-Wed: script package
+- Thursday: publishing calendar + reply pack
+- Friday: KPI weekly report + optimization actions
 
-1. 先选一个细分行业（餐饮/健身/美容/教育）
-2. 用 `templates/` 提示词批量产出内容
-3. 用 `docs/DELIVERY_SOP.md` 做标准化交付
-4. 生成可展示案例后再扩张
+## Pricing Suggestion (RMB)
+- Basic: ¥999 / month
+- Standard: ¥1999 / month
+- Pro: ¥3999 / month
+
+## Roadmap
+- [ ] Add model adapters (OpenAI/Gemini/Kimi) for one-click generation
+- [ ] Add KPI parser from platform CSV exports
+- [ ] Add auto report rendering (Markdown -> PDF)
+- [ ] Add CRM sync for lead tracking
+
+## License
+MIT (add your preferred license if needed)
